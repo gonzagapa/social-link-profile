@@ -1,0 +1,90 @@
+:root {
+  --clr-highlight: hsl(75, 94%, 57%);
+  --clr-white: hsl(0, 0%, 100%);
+  --clr-background: hsl(0, 0%, 8%);
+  --clr-card: hsl(0, 0%, 12%);
+  --clr-item: hsl(0, 0%, 20%);
+  font-size: 0.875rem;
+  --border-radius: 10px;
+  --space-between-block: 1.5rem;
+}
+@font-face {
+  font-family: "Inter";
+  src: url("./assets/fonts/Inter-VariableFont_slnt\,wght.ttf")
+      format("truetype") tech(variations),
+    url("./assets/fonts/Inter-VariableFont_slnt\,wght.woff2")
+      format("ttf-variations");
+  font-weight: 400 700;
+  font-stretch: 50% 200%;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--clr-white);
+  background-color: var(--clr-background);
+}
+p,
+h2 {
+  margin-block: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.image-container {
+  overflow: hidden;
+  border-radius: 100%;
+  max-width: 80px;
+}
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.container {
+  min-height: 100dvh;
+  display: grid;
+  place-content: center;
+}
+.card {
+  background-color: var(--clr-card);
+  border-radius: 0.5rem;
+  padding: 2rem 2.2rem;
+}
+.card__header {
+  display: grid;
+  gap: var(--space-between-block);
+  justify-items: center;
+  margin-bottom: var(--space-between-block);
+}
+.person__name {
+  margin-bottom: 10px;
+}
+.person__location {
+  color: var(--clr-highlight);
+  font-weight: 600;
+}
+.person__brie-description {
+  font-size: 0.8rem;
+  color: hsl(0, 0%, 80%);
+}
+.social-media__list {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  gap: 0.8rem;
+}
+.social-media__item {
+  padding-block: 0.5rem;
+  background-color: var(--clr-item);
+  text-align: center;
+  border-radius: 5px;
+  transition: 3ms ease;
+  font-weight: 600;
+}
+.social-media__item:is(:hover, :focus) {
+  background-color: var(--clr-highlight);
+  color: var(--clr-background);
+}
