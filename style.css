@@ -43,6 +43,11 @@ img {
   width: 100%;
   height: auto;
 }
+a:focus {
+  outline: 2px solid hsl(0, 0%, 100%);
+  border-radius: 5px;
+  outline-offset: 2px;
+}
 .container {
   min-height: 100dvh;
   display: grid;
@@ -84,7 +89,13 @@ img {
   transition: 3ms ease;
   font-weight: 600;
 }
-.social-media__item:is(:hover, :focus) {
+.social-media__item:is(:hover, :focus-within) {
   background-color: var(--clr-highlight);
   color: var(--clr-background);
 }
+
+/* .social-media__item:has(a:focus) {
+  background-color: var(--clr-highlight);
+  color: var(--clr-background);
+}
+ */
